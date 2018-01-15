@@ -1,3 +1,3 @@
-@Override:  ֻ�����ڷ���֮�ϵģ��������߱�����һ�������Ǹ�д����ġ� 
-@Deprecated: ������˲�Ҫʹ�þɵ�API��ʱ���õ�,�����ʱ����ò���������Ϣ,�����趨�ڳ���������е�Ԫ����. 
-@SuppressWarnings:��һ�����Ϳ�������ʱ��һЩ������Ϣ��Ϣ�ر�. 
+@Override:  只能用在方法之上的，用来告诉别人这一个方法是改写父类的。 
+@Deprecated: 建议别人不要使用旧的API的时候用的,编译的时候会用产生警告信息,可以设定在程序里的所有的元素上. 
+@SuppressWarnings:这一个类型可以来暂时把一些警告信息消息关闭. 
