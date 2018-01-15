@@ -95,9 +95,10 @@ Annotation类型里面的参数该怎么设定:
 
 		String community();
 	}
+	
 3、Tarena.java 
 	@Description("科澜,用全面的引擎 驱动多变的未来!")
-	public class Tarena {
+	public class Coorun {
 		@Name(originate = "科澜", community = "业软部")
 		public String getName() {
 			return null;
@@ -108,6 +109,7 @@ Annotation类型里面的参数该怎么设定:
 			return "Java,HelloWorld!";
 		}
 	}
+	
 4、最后，写一个可以运行提取hzu_OpenSource信息的类TestAnnotation
 	package com.kelan;
 
@@ -118,7 +120,7 @@ Annotation类型里面的参数该怎么设定:
 	public class TestAnnotation {
 		@SuppressWarnings({ "rawtypes", "unchecked" })
 		public static void main(String[] args) {
-			String CLASS_NAME = "com.kelan.Tarena";
+			String CLASS_NAME = "com.kelan.Coorun";
 			try {
 				// Class.forName(xxx.xx.xx)的作用是要求JVM查找并加载指定的类,也就是说JVM会执行该类的静态代码段
 				Class test = Class.forName(CLASS_NAME);
@@ -153,7 +155,7 @@ Annotation类型里面的参数该怎么设定:
 			}
 		}
 	}
-
+	
 5、运行结果
 描述: @com.kelan.Description(value=科澜,用全面的引擎 驱动多变的未来!)
 -----------
