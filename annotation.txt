@@ -47,8 +47,15 @@ public enum ElementType {
 	LOCAL_VARIABLE, ANNOTATION_TYPE,PACKAGE   
 } 
 ＠Target里面的ElementType是用来指定Annotation类型可以用在哪一些元素上的.
-说明一下：TYPE(类型), FIELD(属性), METHOD(方法), PARAMETER(参数), CONSTRUCTOR(构造函数),LOCAL_VARIABLE(局部变量), ANNOTATION_TYPE,PACKAGE(包),其中的TYPE(类型)是指可以用在Class,Interface,Enum和Annotation类型上
-
+取值				注解使用范围
+METHOD				可用于方法上
+TYPE				可用于类或者接口上
+ANNOTATION_TYPE		可用于注解类型上（被@interface修饰的类型）
+CONSTRUCTOR			可用于构造方法上
+FIELD				可用于域上
+LOCAL_VARIABLE		可用于局部变量上
+PACKAGE				可用于记录java文件的package信息
+PARAMETER			可用于参数上
 
 
 下面讲的设计一个最简单的Annotation例子,这一例子共用四个文件; 
