@@ -120,14 +120,21 @@ Annotation类型里面的参数该怎么设定:
 		public static void main(String[] args) {
 			String CLASS_NAME = "com.kelan.Tarena";
 			try {
-
+				// Class.forName(xxx.xx.xx)的作用是要求JVM查找并加载指定的类,也就是说JVM会执行该类的静态代码段
 				Class test = Class.forName(CLASS_NAME);
+				/*
+				 * 如果指定类型的注释存在于此元素上,否则返回false
+				 */
 				boolean flag = test.isAnnotationPresent(Description.class);
 				if (flag) {
+					/*
+					 * 返回改程序元素上存在的、指定类型的注解，如果该类型注解不存在，则返回null
+					 */
 					Description des = (Description) test.getAnnotation(Description.class);
 					System.out.println("描述: " + des);
 					System.out.println("-----------");
 				}
+				// 获取本类以及父类或者父接口中所有的公共方法
 				Method[] method = test.getMethods();
 				Set<Method> set = new HashSet<Method>();
 				for (int i = 0; i < method.length; i++) {
@@ -146,14 +153,14 @@ Annotation类型里面的参数该怎么设定:
 			}
 		}
 	}
+
 5、运行结果
-描述: @com.kelan.Description(value=DN,做最好的Java就业实训)
+描述: @com.kelan.Description(value=科澜,用全面的引擎 驱动多变的未来!)
 -----------
 科澜
-创建的社区: server
-主办方123
+创建的社区: 业软部
+业软
 创建的社区: 项目组
-
 
 
 
