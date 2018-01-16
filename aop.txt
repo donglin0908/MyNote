@@ -1,0 +1,10 @@
+AOP面向切面编程:
+applicationContext.xml
+<bean id="logBean" class="com.coorun.aop.SysLog"></bean>
+<aop:config>
+	<aop:pointcut expression="execution(* com.coorun.web.*.*(..))" id="pointCut"/>
+	<aop:aspect ref="logBean">
+		<!-- <aop:before method="doBefore" pointcut-ref="pointCut"/> -->
+		<aop:after-throwing method="dealWithLog" pointcut-ref="pointCut" throwing="e"/>
+	</aop:aspect>
+</aop:config>
