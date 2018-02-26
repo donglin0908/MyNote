@@ -2,6 +2,7 @@
 1)命令行安装mysql压缩包
 0.环境变量%MYSQL_HOME%\bin
 1.my.ini
+[mysql] 
 # 设置mysql客户端默认字符集 
 default-character-set=utf8 
 [mysqld] 
